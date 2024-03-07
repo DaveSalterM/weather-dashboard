@@ -27,6 +27,7 @@ function loadLocal() {
 }
 
 
+// Saves past searches and displays them on left side
 function saveSearches () {
     let searchResults = JSON.parse(localStorage.getItem('search-results'))
     pastSearches.empty()
@@ -76,6 +77,7 @@ function saveSearches () {
 }
 }}
 
+// Grabs weather data from openweathermap API
 function weatherResults(event) {
     event.preventDefault();
 
@@ -149,6 +151,7 @@ function weatherResults(event) {
     searchInput.val('')
 }
 
+// Click function for previous searches
 function clickCards(id) {
     
     let city;
@@ -196,6 +199,7 @@ function clickCards(id) {
         $('#weather-cards').empty()
         $('#weather-info').children().empty()
 
+//HTML id information
         const cityInfo = $('<div>')
             cityInfo.addClass('card-container')
             cityInfo.attr('id', 'card-data')
@@ -231,6 +235,7 @@ function clickCards(id) {
 
 }
 
+// Information to populate Weather Forecast Cards
 function weatherForecast(latitude, longitude) {
 
     const openWeatherApi = `https://api.openweathermap.org/data/2.5/forecast?units=imperial&lat=${latitude}&lon=${longitude}&appid=b3c89b198d75e42b324fef56894937ee`
@@ -262,6 +267,7 @@ function weatherForecast(latitude, longitude) {
         else if (forecastWeather ==='Tornado') {forecastWeather = '🌪️ '
         }
 
+// Populates weather cards
         const weatherCard = $('<div>')
             weatherCard.addClass('card col-lg-2 m-3')
             weatherCard.attr('style')

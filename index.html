@@ -10,27 +10,29 @@
     <title>Weather Dashboard</title>
 </head>
 
-<body>
+<body class="bg-primary">
 
     <nav class="navbar bg-primary p-3 mb-3">
         <div class="container-fluid justify-content-center">
-            <span class="h1 fw-bold text-white">Weather Dashboard</span>
+            <span class="h1 fw-bold">Weather Dashboard</span>
         </div>
     </nav>
 
+<!--Search Bar-->
     <main class="container-fluid">
         <div class="row d-flex" style="margin-right: auto;">
             <div class="col-lg-3 col-12" id="city-search">
                 <form id="search">
                     <label class="h3 fw-bold px-4" for="searchbar">Search for a City:</label>
                         <input type="text" class="h3" style="width: 80%; min-height: 50px " id="searchbar">
-                    <button class="h5 fw-bold border-white text-white bg-primary" style="width: 80%; min-height: 50px">Search</button>
+                    <button class="h5 fw-bold border-white text-white bg-success" style="width: 80%; min-height: 50px">Search</button>
                 </form>                
             <div class="past-searches"></div>
         </div>
 
+<!-- Weather Forecast Cards -->
         <div class="col-lg-9 fw-bold">
-            <div class="text-left p-2 border-dark fs-5" style="border: 1px solid" id="weather-info">
+            <div class="text-left p-2 border-dark bg-light fs-5" style="border: 1px solid" id="weather-info">
                  <h3>&nbsp;</h3>
             </div>
                 <div class="text-left p-2">
